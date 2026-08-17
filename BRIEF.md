@@ -17,6 +17,10 @@
 - ยังไม่ได้ลงทะเบียนใน `modules/REGISTRY.md` ของ modules-hub (แนะนำเพิ่มเป็น Module #21 ทีหลัง)
 - ยังไม่ได้ตรวจ integration.example.ts จริงกับ LINE Messaging API ของจริง (แค่ unit test ผ่าน ไม่ใช่ end-to-end กับ LINE server จริง) — ต้องทดสอบกับ LINE OA sandbox ก่อนขาย
 
+## Application Server (Standalone)
+- มี minimal standalone Express + TypeScript server อยู่ใน `server/` เรียบร้อยแล้ว (ดูรายละเอียดใน [server/README.md](server/README.md) และ [server/HANDOFF.md](server/HANDOFF.md))
+- Server นี้ช่วยปลดล็อกการทำ end-to-end webhook testing กับ LINE OA sandbox จริง แต่ยังไม่ได้รันการทดสอบจริงกับ LINE server (ยังเป็น open item ที่ต้องทดสอบก่อนใช้งานจริง)
+
 ## TODO — ไล่เขียนด้วยกัน
 - [ ] ลูกค้าเป้าหมาย (ธุรกิจ SME ไทยที่ใช้ LINE OA)
 - [ ] MVP scope (ตอบคำถามทั่วไป / จอง / สั่งของ — ดูจาก state machine ที่มีอยู่: IDLE/ORDERING/BOOKING/CONFIRMING/COMPLETED)
